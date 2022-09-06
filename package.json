@@ -1,7 +1,7 @@
 {
   "name": "smart-kitchen-surfer",
   "productName": "Smart Kitchen Surfer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Smart Kitchen Surfer - An electron app to browse Smart Kitchen. Mainly helpful on PC running old version OS or Browsers.",
   "main": "main.js",
   "scripts": {
