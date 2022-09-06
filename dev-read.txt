@@ -1,0 +1,9 @@
+Make changes required. The run script defined in package.json
+ie, npm run build. This will create setup files (.exe) in dist folder.
+
+Change version number in package.json.
+Commit the changes with appropriate message.
+Push to github..
+
+Do release a new version in github, with the exe files attached as assets.
+Exe files are of x64 and ia32..
