@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Smart Kitchen</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      img#logo-img {
+        position: relative;
+        top: 125px;
+        transition: all 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+      }
+
+      @keyframes GradientAnimation {
+        0%{ background: radial-gradient(circle, rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0)); }
+        10%{ background: radial-gradient(circle, rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0)); }
+        20%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0)); }
+        30%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0), rgba(251,251,251,0), rgba(251,251,251,0)); }
+        40%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0), rgba(251,251,251,0)); }
+        50%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95), rgba(251,251,251,0)); }
+        60%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1), rgba(251,251,251,0.95)); }
+        70%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94), rgba(251,251,251,1)); }
+        80%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251,0.89), rgba(251,251,251,0.94)); }
+        90%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251, 1), rgba(251,251,251,0.94)); }
+        100%{ background: radial-gradient(circle, rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgba(251,251,251,1), rgb(251,251,251, 1), rgba(251,251,251,1)); }
+      }
+
+      body {
+        animation: GradientAnimation 0.65s ease 0.10s forwards;
+      }
+
+      div#host_div {
+        transform: scale(0);
+        transition: all 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+        position: relative;
+        top: 0;
+      }
+
+      input[type='text'] {
+        padding: 10px;
+        width: 220px;
+        border: 1px solid #B1B1B1;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      input[type='image'] {
+        position: relative;
+        top: 15px;
+      }
+
+      #status_div {
+        font-size: 1.2rem;
+        text-align: center;
+        color: red;
+        font-style: italic;
+        width: 100%;
+        transform: scale(0);
+        overflow: hidden;
+        transition: all 0.2s linear 0s;
+      }
+
+      #info_div {
+        position: relative;
+        top: -35px;
+        transform: scale(0);
+        transition: all 0.2s cubic-bezier(1, 0.04, 0.35, 2.51) 0s;
+      }
+
+      #start_div {
+        position: relative;
+        top: -10px;
+        transform: scale(0);
+        transition: all 0.2s cubic-bezier(1, 0.04, 0.35, 2.51) 0s;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" width="300" id="logo-img" />
+      <div id="host_div">
+        <input type="text" placeholder="IP or Host" id="host" value=""> <input id="host_submit" type="image" src="submit-arrow.png" alt="Submit" width="42" height="42">
+      </div>
+      <div id="info_div"><img src="info.png" width="300" id="info-img" /></div>
+      <div id="start_div"><img src="start.png" width="300" id="start-img" /></div>
+      <div id="status_div">...</div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

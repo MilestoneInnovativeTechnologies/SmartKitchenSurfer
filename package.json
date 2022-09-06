@@ -1,0 +1,33 @@
+{
+  "name": "smart-kitchen-surfer",
+  "productName": "Smart Kitchen Surfer",
+  "version": "1.0.0",
+  "description": "Smart Kitchen Surfer - An electron app to browse Smart Kitchen. Mainly helpful on PC running old version OS or Browsers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder && electron-builder --ia32"
+  },
+  "author": "Milestone Innovative Technologies",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^20.1.1",
+    "electron-builder": "^23.3.3"
+  },
+  "build": {
+    "appId": "smart-kitchen-surfer",
+    "artifactName": "SKSurfer-Setup-${arch}-${version}.exe",
+    "win": {
+      "target": ["nsis"],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "Smart Kitchen Surfer",
+      "oneClick": false,
+      "license": "license.txt",
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
