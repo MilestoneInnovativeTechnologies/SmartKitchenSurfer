@@ -121,7 +121,7 @@
       <workItem from="1662379682345" duration="124000" />
       <workItem from="1662437480163" duration="618000" />
       <workItem from="1662439712559" duration="4941000" />
-      <workItem from="1662447188903" duration="2073000" />
+      <workItem from="1662447188903" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="default host removed">
       <created>1662378356022</created>
@@ -155,9 +155,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
     <MESSAGE value="default host removed" />
     <MESSAGE value="initialization" />
     <option name="LAST_COMMIT_MESSAGE" value="initialization" />
